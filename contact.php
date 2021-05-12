@@ -14,6 +14,22 @@
         //6.1 Save contact submission to database
 
 ?>
+
+<?php
+/*  $firstName = '';
+    $lastName = '';
+    $email = '';
+    $phone = '';
+
+     if(isset($_POST['submit'])){
+        $firstName = $_POST['first_name'];
+        $lastName = $_POST['last_name'];
+        $email = $_POST['email'];
+        $phone = $_POST['phone'];
+     }
+*/
+?>
+
 <script>
     //This is javascript
     function clearInput(input){
@@ -60,15 +76,23 @@
             <div class="input-fields">
                 <input type="submit" name="submit" value="submit"></input>
                 <button type="button">Reset</button>
-                <?php
-                    if(isset($_POST)){
-                        echo "<h3>Post is Set</h3>";
-                    }
-                ?>
             </div>
         </div>
-    </form>
+        <div>
+            <!--Deomstration of if and for loop
+            <?php //if(isset($_POST['submit'])) : ?>
+                <?php //for($i = 0; $i < 5; $i++) : ?>
+                    <div><?php //echo $i; ?></div>
+                <?php //endfor; ?>
+            <?php //endif; ?>
+            -->
+            <!-- $_POST{first_name=>'', last_name=>'', email=>''....};-->
+            <?php foreach($_POST as $value) : ?>
+                <div><?php echo $value; ?></div>
+            <?php endforeach; ?>
 
+        </div>
+    </form>
 </div>
 <div class="col-3">
     <div class="side-info">
