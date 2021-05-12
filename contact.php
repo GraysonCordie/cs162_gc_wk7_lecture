@@ -16,7 +16,23 @@
 ?>
 <script>
     //This is javascript
-    
+    function clearInput(input){
+        //var defaultValue = input.value;
+        //cases:
+        //Empty box
+        //Filled box with user data
+        //Default box value
+
+        if(input.value == ''){
+            input.value = input.defaultValue;
+        }
+        else if(input.value == input.defaultValue){
+            input.value=''
+        }
+        else{
+            //do nothing
+        }
+    }
 </script>
 
 
@@ -26,19 +42,19 @@
     <form>
         <div class="input-row">
             <div class="input-label"><label>First Name:</label></div>
-            <div class="input-field"><input type="text" name="first_name"></div>
+            <div class="input-field"><input type="text" name="first_name" onfocus="clearInput(this)" onfocusout="clearInput(this)" value="Enter First Name" defaultValue="Enter First Name"></div>
         </div>
         <div class="input-row">
             <div class="input-label"><label>Last Name:</label></div>
-            <div class="input-field"><input type="text" name="last_name"></div>
+            <div class="input-field"><input type="text" name="last_name" onfocus="clearInput(this)" onfocusout="clearInput(this)" value="Enter Last Name" defaultValue="Enter Last Name"></div>
         </div>
         <div class="input-row">
             <div class="input-label"><label>Email Address:</label></div>
-            <div class="input-field"><input type="text" name="email"></div>
+            <div class="input-field"><input type="text" name="email" onfocus="clearInput(this)" onfocusout="clearInput(this)" value="Enter Email" defaultValue="Enter Email"></div>
         </div>
         <div class="input-row">
             <div class="input-label"><label>Phone Number:</label></div>
-            <div class="input-field"><input type="text" name="phone"></div>
+            <div class="input-field"><input type="text" name="phone" onfocus="clearInput(this)" onfocusout="clearInput(this)" value="Enter Phone Number" defaultValue="Enter Phone"></div>
         </div>
         <div class="input-row">
             <div class="input-fields">
